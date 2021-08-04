@@ -19,7 +19,7 @@ zone = zone(arguments[2]);
 console.log("Yarıçapı",arguments[2], "olan dairenin alanı :" , zone);
 
 ```
-![](https://github.com/MehmetMaytahan/Kodluyoruz_NodeJs_Repo/blob/main/quesion1.png)
+![](https://github.com/MehmetMaytahan/Kodluyoruz_NodeJs_Repo/blob/main/question1.png)
 
 </details>
 
