@@ -19,6 +19,7 @@ zone = zone(arguments[2]);
 console.log("Yarıçapı",arguments[2], "olan dairenin alanı :" , zone);
 
 ```
+
 ![](https://github.com/MehmetMaytahan/Kodluyoruz_NodeJs_Repo/blob/main/question_1.png)
 
 </details>
@@ -54,6 +55,49 @@ addPost({ title: "Post Four", body: "This is post four" }, listPosts);
 ```
 
 ![](https://github.com/MehmetMaytahan/Kodluyoruz_NodeJs_Repo/blob/main/question_2.png)
+
+</details>
+
+# Node.js Homework_3
+
+<details>
+
+  <summary>Question_3 and Answer</summary>
+  
+  1. Daire alan : circleArea ve daire çevre : circleCircumference fonksiyonları içeren ve consola sonuçları
+  yazdıran circle.js dosyası oluşturunuz.
+  2. Module.exports yöntemi ile fonksiyonları oluştururken export ediniz.
+  3. require ve object destructing kullanarak index.js dosyasında yarıçap (r) 5 olacak şekilde ekran çıktısını alınız.
+
+  ```js
+  // circle.js
+  
+  const circleArea = r => {
+    return Math.PI *r* r;
+  };
+
+  const circleCircumference = r => {
+    return 2 *Math.PI* r;
+  };
+
+  module.exports = {
+    circleArea,
+    circleCircumference
+  };
+
+  ```
+
+  ```js
+  // index.js
+  
+  const { circleArea, circleCircumference } = require("./circleModule/circle");
+
+  console.log(`Circle area: ${circleArea(5)}`);
+  console.log(`Circle Circumference: ${circleCircumference(5)}`);
+  ```
+
+  ![](https://github.com/MehmetMaytahan/Kodluyoruz_NodeJs_Repo/blob/main/question_3.png)
+
 
 </details>
 
