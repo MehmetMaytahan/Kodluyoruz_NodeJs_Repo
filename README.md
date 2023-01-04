@@ -19,7 +19,7 @@ zone = zone(arguments[2]);
 console.log("Yarıçapı",arguments[2], "olan dairenin alanı :" , zone);
 
 ```
-![](https://github.com/MehmetMaytahan/Kodluyoruz_NodeJs_Repo/blob/main/question1.png)
+![](https://github.com/MehmetMaytahan/Kodluyoruz_NodeJs_Repo/blob/main/question_1.png)
 
 </details>
 
@@ -52,6 +52,8 @@ addPost({ title: "Post Four", body: "This is post four" }, listPosts);
 
 
 ```
+
+![](https://github.com/MehmetMaytahan/Kodluyoruz_NodeJs_Repo/blob/main/question_2.png)
 
 </details>
 
