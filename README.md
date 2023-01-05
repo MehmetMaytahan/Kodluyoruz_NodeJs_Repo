@@ -176,7 +176,7 @@ operations.map(operation => operation());
 ```js
 import http from "http";
 const { createServer } = http;
-const PORT = 3000;
+const PORT = 5000;
 
 const server = createServer((req, res) => {
   const url = req.url;
@@ -212,7 +212,52 @@ server.listen(PORT, () => {
   console.log(`Sunucu ${PORT} portunda baslatildi`);
 });
 ```
+</details>
 
+# Node.js Homework_6
+
+<details close>
+  <summary><i>Question_6 and Answer</i></summary> </br>
+    
+  Öncelikle şunu belirteyim. Koa.js hakkında konuşmadığımızı biliyorum ve bu ödev ilk aşamada bizi zorlayacak. Buradaki amacım yeni bir teknolojiye başlama cesareti oluşturmak ve hata yapma özgürlüğümüz olduğunu göstermek.
+
+  1. koa paketini indirelim.
+  2. index, hakkimda ve iletisim sayfaları oluşturalım.
+  3. Sayfalara içerik olarak xxx sayfasına hoşgeldiniz şeklinde h1 başlıkları yazdıralım.
+  4. port numarası olarak 3000'i kullanalım.
+
+```js
+const Koa = require("koa");
+const app = new Koa();
+const PORT = 3000;
+
+app.use(async ctx => {
+  const path = ctx.path;
+
+  switch (path) {
+    case "/":
+      ctx.type = "text/html";
+      ctx.body = "<h1>Home Page</h1>";
+      break;
+    case "/about":
+      ctx.type = "text/html";
+      ctx.body = "<h1>About Page</h1>";
+      break;
+    case "/contact":
+      ctx.type = "text/html";
+      ctx.body = "<h1>Contact Page</h1>";
+      break;
+    default:
+      ctx.type = "text/html";
+      ctx.body = "<h1>404 Not Found</h1>";
+      break;
+  }
+});
+
+app.listen(PORT, () => {
+  console.log("Server is running on port: " + PORT);
+});
+```
 </details>
 
 ***
