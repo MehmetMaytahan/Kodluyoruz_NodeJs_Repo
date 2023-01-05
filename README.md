@@ -106,6 +106,13 @@ addPost({ title: "Post Four", body: "This is post four" }, listPosts);
 <details close>
   <summary><i>Question_4 and Answer</i></summary> </br>
 
+  Node.js FS Modülü kullanarak CRUD işlemleri yapacağız.
+
+  1. employees.json dosyası oluşturalım ve içerisine {"name": "Employee 1 Name", "salary": 2000} verisini ekleyelim. (CREATE)
+  2. Bu veriyi okuyalım. (READ)
+  3. Bu veriyi güncelleyelim. (UPDATE)
+  4. Dosyayı silelim. (DELETE)
+
 ```js
 import { readFile, writeFile, rm } from "fs";
 
