@@ -60,7 +60,7 @@ addPost({ title: "Post Four", body: "This is post four" }, listPosts);
 
 # Node.js Homework_3
 
-<details>
+<details close>
 
   <summary>Question_3 and Answer</summary>
   
@@ -100,6 +100,61 @@ addPost({ title: "Post Four", body: "This is post four" }, listPosts);
 
 
 </details>
+
+# Node.js Homework_4
+
+<details close>
+  <summary>Question_4 and Answer</summary>
+
+```js
+import { readFile, writeFile, rm } from "fs";
+
+const file = "employees.json";
+const data = `{"name": "Employee 1 Name", "salary": 2000}`;
+const updateData = `{"name": "Employee 2 Name", "salary": 5000}`;
+const format = "utf-8";
+
+// DOSYA YAZMA
+const _writeFile = () => {
+  writeFile(file, data, format, err => {
+    if (err) throw err;
+    console.log("Dosya yazma islemi basarili: ", JSON.parse(data));
+  });
+};
+
+// DOSYA OKUMA
+const _readFile = () => {
+  readFile(file, format, (err, data) => {
+    if (err) throw err;
+    console.log("Dosya okuma islemi basarili: ", JSON.parse(data));
+  });
+};
+
+// DOSYA GUNCELLEME
+const _updateFile = () => {
+  writeFile(file, updateData, format, err => {
+    if (err) throw err;
+    console.log("Dosya guncelleme islemi basarili: ", JSON.parse(updateData));
+  });
+};
+
+// DOSYA SILME
+const _deleteFile = () => {
+  rm(file, { recursive: true }, err => {
+    if (err) throw err;
+    console.log("Dosya silme islemi basarili: ", "employees.json");
+  });
+};
+
+const operations = [_writeFile, _readFile, _updateFile, _deleteFile];
+operations.map(operation => operation());
+```
+
+![](https://github.com/MehmetMaytahan/Kodluyoruz_NodeJs_Repo/blob/main/question_4.png)
+
+</details>
+
+
 
 ***
 
