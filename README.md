@@ -226,6 +226,9 @@ server.listen(PORT, () => {
   3. Sayfalara içerik olarak xxx sayfasına hoşgeldiniz şeklinde h1 başlıkları yazdıralım.
   4. port numarası olarak 3000'i kullanalım.
 
+
+    1. Yontem
+
 ```js
 const Koa = require("koa");
 const app = new Koa();
@@ -258,6 +261,37 @@ app.listen(PORT, () => {
   console.log("Server is running on port: " + PORT);
 });
 ```
+    2. Yontem
+
+```js
+const Koa = require("koa");
+const Router = require("koa-router");
+const app = new Koa();
+const router = new Router();
+const PORT = 3000;
+
+router.get("/", ctx => {
+  ctx.type = "text/html";
+  ctx.body = "<h1>Home Page</h1>";
+});
+
+router.get("/about", ctx => {
+  ctx.type = "text/html";
+  ctx.body = "<h1>About Page</h1>";
+});
+
+router.get("/contact", ctx => {
+  ctx.type = "text/html";
+  ctx.body = "<h1>Contact Page</h1>";
+});
+
+app.use(router.routes()).use(router.allowedMethods());
+
+app.listen(PORT, () => {
+  console.log("Server is running on port: " + PORT);
+});
+```
+
 </details>
 
 ***
